@@ -1,0 +1,64 @@
+.header__title {
+  max-width: 400px;
+  height: auto;
+  display: inline-block;
+  padding: 30px 30px 20px 30px;
+  margin: 0px 0px 40px 0px;
+  text-overflow: ellipsis;
+  width: 100%;
+  vertical-align: bottom;
+  font: 40px "Roboto", sans-serif;
+  text-transform: uppercase;
+  border-bottom: 6px dotted #17470a;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 55px #49ff18,
+    0 0 75px #49ff18, -1px 5px 5px rgba(73, 255, 24, 0);
+}
+
+.header__input-wrapper {
+  margin-bottom: 40px;
+}
+
+.header__input {
+  padding: 3px 10px;
+  border: 1px solid rgba(90, 128, 81, 0.43);
+  outline: 3px solid #32aa11;
+}
+
+.header__button {
+  outline: none;
+  cursor: pointer;
+  border-radius: 30px;
+  padding: 10px 20px;
+  margin-bottom: 40px;
+  border: 1px solid rgba(90, 128, 81, 0.43);
+  -webkit-box-shadow: 1px 2px 15px -10px rgba(73, 255, 24, 0.43),
+    1px 2px 15px 9px rgba(28, 255, 0, 0.36),
+    1px 2px 15px 9px rgba(28, 255, 0, 0.36);
+  box-shadow: 1px 2px 15px -10px rgba(73, 255, 24, 0.43),
+    1px 2px 15px 9px rgba(28, 255, 0, 0.36),
+    1px 2px 15px 9px rgba(28, 255, 0, 0.36);
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 55px #49ff18,
+    0 0 75px #49ff18, -1px 5px 5px rgba(73, 255, 24, 0);
+  background-color: #148900;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.header__button:hover {
+  color: #000000;
+  text-shadow: none;
+  box-shadow: 1px 2px 15px -10px rgba(73, 255, 24, 0.43),
+    1px 2px 15px 9px rgba(28, 255, 0, 0.36);
+}
+
+.header__button:active {
+  box-shadow: 1px 2px 15px -10px rgba(73, 255, 24, 0.43);
+}
+
+.cars-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding: 0 20px;
+}

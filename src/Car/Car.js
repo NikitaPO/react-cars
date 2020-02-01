@@ -1,4 +1,5 @@
 import React from "react";
+import withClass from "../hoc/withClass";
 import "./Car.css";
 
 class Car extends React.Component {
@@ -10,9 +11,8 @@ class Car extends React.Component {
 
   render() {
     const { props } = this;
-
     return (
-      <li className="car">
+      <React.Fragment>
         <h3 className="car__title">{props.name}</h3>
         <p>
           Car price: <strong>{props.price}$</strong>
@@ -21,9 +21,9 @@ class Car extends React.Component {
           Car year: <strong>{props.year}</strong>
         </p>
         <button className="close" onClick={props.onDelete}></button>
-      </li>
+      </React.Fragment>
     );
   }
 }
 
-export default Car;
+export default withClass(Car, "car");

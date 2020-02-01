@@ -6,6 +6,11 @@
   border-radius: 10px;
   margin: 10px;
   position: relative;
+  transition: box-shadow 0.3s;
+}
+
+.car:hover {
+  box-shadow: 0px 5px 5px 0px #2c990e;
 }
 
 .title {

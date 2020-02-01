@@ -1,6 +1,8 @@
 import React from "react";
 import Car from "./Car/Car.js";
 import "./App.css";
+import ErrorBoundary from "./ErrorBoundary/ErrorBoundary";
+import Counter from "./Counter/Counter.js";
 
 class App extends React.Component {
   constructor(props) {
@@ -41,13 +43,14 @@ class App extends React.Component {
     if (this.state.showCars) {
       cars = this.state.cars.map((car, index) => {
         return (
-          <Car
-            key={index}
-            name={car.name}
-            price={car.price}
-            year={car.year}
-            onDelete={this.deleteCarHandler.bind(this, index)}
-          />
+          <ErrorBoundary key={index}>
+            <Car
+              name={car.name}
+              price={car.price}
+              year={car.year}
+              onDelete={this.deleteCarHandler.bind(this, index)}
+            />
+          </ErrorBoundary>
         );
       });
     }
@@ -55,6 +58,7 @@ class App extends React.Component {
     return (
       <div className="header">
         <h1 className="header__title">{this.state.title}</h1>
+        <Counter />
         <div className="header__input-wrapper">
           <input
             value={this.state.title}

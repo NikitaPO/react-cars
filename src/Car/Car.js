@@ -1,6 +1,7 @@
 import React from "react";
 import withClass from "../hoc/withClass";
 import "./Car.css";
+import PropTypes from "prop-types";
 
 class Car extends React.Component {
   constructor(props) {
@@ -25,5 +26,12 @@ class Car extends React.Component {
     );
   }
 }
+
+Car.propTypes = {
+  name: PropTypes.string,
+  price: PropTypes.number,
+  year: PropTypes.number,
+  onDelete: PropTypes.func
+};
 
 export default withClass(Car, "car");

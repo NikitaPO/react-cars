@@ -31,28 +31,53 @@
   margin-bottom: 40px;
   border: 1px solid rgba(90, 128, 81, 0.43);
   -webkit-box-shadow: 1px 2px 15px -10px rgba(73, 255, 24, 0.43),
-    1px 2px 15px 9px rgba(28, 255, 0, 0.36),
     1px 2px 15px 9px rgba(28, 255, 0, 0.36);
   box-shadow: 1px 2px 15px -10px rgba(73, 255, 24, 0.43),
-    1px 2px 15px 9px rgba(28, 255, 0, 0.36),
     1px 2px 15px 9px rgba(28, 255, 0, 0.36);
   text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 55px #49ff18,
     0 0 75px #49ff18, -1px 5px 5px rgba(73, 255, 24, 0);
   background-color: #148900;
   color: #ffffff;
   text-transform: uppercase;
-  transition: box-shadow 0.2s;
+  transition: box-shadow 0.2s, color 0.3s;
 }
 
 .header__button:hover {
   color: #000000;
   text-shadow: none;
-  box-shadow: 1px 2px 15px -10px rgba(73, 255, 24, 0.43),
-    1px 2px 15px 9px rgba(28, 255, 0, 0.36);
+  box-shadow: 1px 2px 15px 9px rgba(28, 255, 0, 0.36);
 }
 
 .header__button:active {
-  box-shadow: 1px 2px 15px -10px rgba(73, 255, 24, 0.43);
+  color: #ffffff;
+  text-shadow: none;
+  box-shadow: inset 2px 4px 6px 0px #193913;
+  background-color: #148900;
+  transition: none;
+}
+
+.def-btn {
+  border: 1px solid #148900;
+  border-radius: 20px;
+  margin: 10px;
+  padding: 5px 10px;
+  background-color: transparent;
+  color: #32aa11;
+  cursor: pointer;
+  outline: none;
+  transition: border 0.3s, color 0.3s;
+  text-align: center;
+}
+
+.def-btn:hover {
+  border: 1px solid #1cb901;
+  color: #3bc715;
+}
+
+.def-btn:active {
+  transition: none;
+  border: 1px solid #ffffff;
+  color: #ffffff;
 }
 
 .cars-list {

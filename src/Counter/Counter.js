@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Counter2 from "../Counter2/Counter2";
 import "./Counter.css";
 
 class Counter extends Component {
@@ -19,7 +20,7 @@ class Counter extends Component {
   counterDown = () => {
     this.setState(prevState => {
       return {
-        counter: prevState.counter + 1
+        counter: prevState.counter - 1
       };
     });
   };
@@ -30,8 +31,23 @@ class Counter extends Component {
         <h2>
           Counter: <strong>{this.state.counter}</strong>
         </h2>
-        <button onClick={this.counterUp}>+</button>
-        <button onClick={this.counterDown}>-</button>
+        <div className="buttons">
+          <button
+            className="def-btn"
+            style={{ width: "30px" }}
+            onClick={this.counterUp}
+          >
+            +
+          </button>
+          <button
+            className="def-btn"
+            style={{ width: "30px" }}
+            onClick={this.counterDown}
+          >
+            -
+          </button>
+        </div>
+        <Counter2 />
       </div>
     );
   }

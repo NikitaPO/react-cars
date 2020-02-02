@@ -144,6 +144,9 @@ class App extends React.Component {
               </React.Fragment>
             )}
           />
+          <Route
+            render={() => <h2 style={{ color: "red" }}>Error 404 not found</h2>}
+          />
         </Switch>
       </div>
     );

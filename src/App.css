@@ -1,14 +1,23 @@
+*::selection {
+  background-color: rgba(26, 187, 11, 0.26);
+}
+
+ul,
+ol {
+  list-style-type: none;
+  padding-inline-start: 0px;
+}
+
 .header__title {
   max-width: 400px;
   height: auto;
   display: inline-block;
   padding: 30px 30px 20px 30px;
-  margin: 0px 0px 40px 0px;
+  margin: 0px 0px 0px 0px;
   text-overflow: ellipsis;
   width: 100%;
   font: 40px "Roboto", sans-serif;
   text-transform: uppercase;
-  border-bottom: 6px dotted #17470a;
   text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 55px #49ff18,
     0 0 75px #49ff18, -1px 5px 5px rgba(73, 255, 24, 0);
 }
@@ -28,7 +37,7 @@
   cursor: pointer;
   border-radius: 30px;
   padding: 10px 20px;
-  margin-bottom: 40px;
+  margin-bottom: 8px;
   border: 1px solid rgba(90, 128, 81, 0.43);
   -webkit-box-shadow: 1px 2px 15px -10px rgba(73, 255, 24, 0.43),
     1px 2px 15px 9px rgba(28, 255, 0, 0.36);
@@ -56,8 +65,51 @@
   transition: none;
 }
 
+.navigation {
+  margin: 0 auto;
+  text-align: center;
+  border-bottom: 6px dotted #17470a;
+  margin-bottom: 20px;
+}
+
+.navigation__item {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  padding: 10px 5px;
+}
+
+.navigation__item + .navigation__item {
+  margin-left: 30px;
+}
+
+.navigation__item::before {
+  position: absolute;
+  border-bottom: 2px solid #32aa11;
+  opacity: 0.5;
+  width: 100%;
+  content: "";
+  bottom: 0px;
+  left: -101%;
+  transition: left 0.3s;
+}
+
+.navigation__item:hover::before {
+  left: 0;
+}
+
+.navigation__link {
+  color: #349918;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navigation__link.active-link {
+  color: #52e928;
+}
+
 .def-btn {
-  border: 1px solid #148900;
+  border: 1px solid #919990;
   border-radius: 20px;
   margin: 10px;
   padding: 5px 10px;
@@ -84,6 +136,5 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  list-style-type: none;
   padding: 0 20px;
 }
